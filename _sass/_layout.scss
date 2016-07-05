@@ -181,9 +181,10 @@
 
     > li {
         background: white;
-        width: 160px;
-        height: 160px;
-        margin: $spacing-unit/8;
+        width: 100%;
+        max-width: 400px;
+        box-sizing: border-box;
+        margin: $spacing-unit/8 0;
         float: left;
         border: 1px solid #DEDEDE;
         position: relative;
@@ -198,20 +199,19 @@
 }
 
 .post-meta {
-    font-size: 11px;
+    font-size: $small-font-size;
     color: $grey-color;
-    position: absolute;
-    bottom: $spacing-unit/2;
 }
 
 .post-link {
     display: block;
-    padding: $spacing-unit/2;
+    padding: $spacing-unit/3;
     font-size: 12px;
 }
 
 .post-link h3 {
     font-size: 16px;
+    margin-bottom: 0;
 }
 
 
