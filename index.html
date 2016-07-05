@@ -1,23 +1,45 @@
 ---
-layout: default
+layout: splash
 ---
 
 <div class="home">
 
-  <h1 class="page-heading">Posts</h1>
+  <h2 class="recent-blog-heading">Recent Blogs & Projects</h2>
 
   <ul class="post-list">
     {% for post in site.posts %}
-      <li>
-        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
-
-        <h2>
-          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-        </h2>
+      <li class="post-item">
+        <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">
+          <h2 class="post-title">{{ post.title }}</h2>
+          <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+        </a>
       </li>
     {% endfor %}
-  </ul>
+    <li class="post-item">
+      <a class="post-link" href="https://medium.com/@tonyguglielmi/4-habits-of-a-successful-team-612016723f81#.6jougdew7">
+        <h3 class="post-title">4 Habits of a Successful Team.</h3>
+        <span class="post-meta">Jun 21, 2016 on Medium</span>
+      </a>
+    </li>
+    <li class="post-item">
+      <a class="post-link" href="https://medium.com/@tonyguglielmi/ui-state-checklist-for-developers-and-designers-f767f97dfac2#.v538p5n5f">
+        <h3 class="post-title">UI State Checklist for Developers and Designers</h3>
+        <span class="post-meta">Apr 3, 2016 on Medium</span>
+      </a>
+    </li>
+    <li class="post-item">
+      <a class="post-link" href="https://medium.com/@tonyguglielmi/improving-imgur-s-first-touch-experience-on-mobile-web-with-a-new-gifm-a-suggestion-7a2821492019#.8pvw6rw83">
+        <h3 class="post-title">Improving Imgur’s First Touch Experience on mobile web with a new GIFm.</h3>
+        <span class="post-meta">Sep 14, 2015 on Medium</span>
+      </a>
+    </li>
+    <li class="post-item">
+      <a class="post-link" href="https://medium.com/@tonyguglielmi/the-golden-foundation-of-process-79d09431fe5e#.7q588bi4y">
+        <h3 class="post-title">The Golden Foundation of Process</h3>
+        <span class="post-meta">Jun 24, 2015 on Medium</span>
+      </a>
+    </li>
 
-  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
+  </ul>
 
 </div>
